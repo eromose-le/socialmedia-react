@@ -12,7 +12,7 @@
 
 ## `DESCRIPTON`
 
-> A react social media application, A facebook clone application.
+> A react social media application, A facebook clone application. Using the lastest react router V6
 
 ## `REPO`
 
@@ -22,4 +22,4 @@ git push origin main
 
 ## `LINK TO DASHBOARD ON HEROKU`
 
-NIL
+NILL
