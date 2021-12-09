@@ -1,12 +1,15 @@
 import './topbar.css';
 import { Search, Person, Chat, Notifications } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 const Topbar = () => {
   return (
     <div className="topbarContainer">
       {/* left */}
       <div className="topbarLeft">
-        <span className="logo">BA. social</span>
+        <Link className="link" to="/">
+          <span className="logo">BA. social</span>
+        </Link>
       </div>
       {/* center */}
       <div className="topbarCenter">
@@ -21,14 +24,20 @@ const Topbar = () => {
       {/* right */}
       <div className="topbarRight">
         <div className="topbarLinks">
-          <span className="topbarLink">Homepage</span>
-          <span className="topbarLink">Timeline</span>
+          <Link className="link" to="/">
+            <span className="topbarLink">Homepage</span>
+          </Link>
+          <Link className="link" to="/">
+            <span className="topbarLink">Timeline</span>
+          </Link>
         </div>
         <div className="topbarIcons">
-          <div className="topbarIconItem">
-            <Person />
-            <span className="topbarIconBadge">1</span>
-          </div>
+          <Link className="link" to="/profile">
+            <div className="topbarIconItem">
+              <Person />
+              <span className="topbarIconBadge">1</span>
+            </div>
+          </Link>
           <div className="topbarIconItem">
             <Chat />
             <span className="topbarIconBadge">2</span>
@@ -38,7 +47,9 @@ const Topbar = () => {
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
-        <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
+        <Link className="link" to="/profile">
+          <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
+        </Link>
       </div>
     </div>
   );
